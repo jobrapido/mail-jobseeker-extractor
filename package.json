@@ -1,0 +1,69 @@
+{
+  "name": "mail-jobseeker-extractor",
+  "version": "1.0.0",
+  "main": "build/src/main.js",
+  "license": "UNLICENSED",
+  "description": "Mail Jobseeker Extractorß",
+  "author": "Jobrapido",
+  "private": true,
+  "scripts": {
+    "build": "npm run-script clean && npm run-script lint && npm run-script test && npm run-script compile",
+    "compile": "tsc",
+    "compile-watch": "tsc -w",
+    "clean": "rm -rf build dist",
+    "dev": "concurrently 'tsc -w' 'nodemon build/src/main.js'",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest --forceExit --verbose"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "babelConfig": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/**/*.test.(ts)"
+    ],
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.14",
+    "@types/moment-timezone": "^0.5.13",
+    "@types/node": "^14.11.8",
+    "@types/pg": "^7.14.5",
+    "@types/supertest": "^2.0.10",
+    "concurrently": "^5.3.0",
+    "jest": "^26.5.2",
+    "nodemon": "^2.0.4",
+    "reflect-metadata": "^0.1.13",
+    "supertest": "^5.0.0",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "tslint": "^5.20.1",
+    "typemoq": "^2.1.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "commander": "^6.1.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.31",
+    "pg": "^8.4.1",
+    "tsyringe": "^4.3.0",
+    "typed-rest-client": "^1.7.3",
+    "winston": "^3.3.3"
+  }
+}

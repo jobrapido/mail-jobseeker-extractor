@@ -1,0 +1,39 @@
+{
+  "list": [
+    {
+      "datastoreKey": {
+        "region": "mail.jobseeker.extractor.schedule.na",
+        "key": "end"
+      },
+      "value": "2018-05-30"
+    },
+    {
+      "datastoreKey": {
+        "region": "mail.jobseeker.extractor.schedule.na",
+        "key": "interval"
+      },
+      "value": "7"
+    },
+    {
+      "datastoreKey": {
+        "region": "mail.jobseeker.extractor.schedule.na",
+        "key": "query"
+      },
+      "value": "q1"
+    },
+    {
+      "datastoreKey": {
+        "region": "mail.jobseeker.extractor.schedule.na",
+        "key": "start"
+      },
+      "value": "2018-05-01"
+    },
+    {
+      "datastoreKey": {
+        "region": "mail.jobseeker.extractor.schedule.na",
+        "key": "time"
+      },
+      "value": "23:00"
+    }
+  ]
+}

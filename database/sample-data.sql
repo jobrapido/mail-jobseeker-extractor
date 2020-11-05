@@ -1,0 +1,21 @@
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user1@zz.db',  21, current_date-100, current_date-80);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user2@zz.db',  22, current_date-100, current_date-78);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user3@zz.db',  23, current_date-100, current_date-74);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user4@zz.db',  24, current_date-100, current_date-69);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user5@zz.db',  25, current_date-100, current_date-66);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user6@zz.db',  26, current_date-100, current_date-62);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user7@zz.db',  27, current_date-100, current_date-58);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user8@zz.db',  28, current_date-100, current_date-55);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user9@zz.db',  29, current_date-100, current_date-52);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user10@zz.db', 30, current_date-100, current_date-51);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user11@zz.db', 31, current_date-100, current_date-48);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user12@zz.db', 32, current_date-100, current_date-45);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user13@zz.db', 33, current_date-100, current_date-42);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user14@zz.db', 34, current_date-100, current_date-36);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user15@zz.db', 35, current_date-100, current_date-31);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user16@zz.db', 36, current_date-100, current_date-28);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user17@zz.db', 37, current_date-100, current_date-23);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user18@zz.db', 38, current_date-100, current_date-21);
+INSERT INTO jobseeker (email, age, created, lastvisit) VALUES ('user19@zz.db', 39, current_date-100, current_date-16);
+
+INSERT INTO country_state (country, lastrun, running) VALUES ('zz', '1970-01-01', false);

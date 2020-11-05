@@ -1,0 +1,73 @@
+
+{
+  "id": "${ENVIRONMENT}/${MARATHON_APP_ID}",
+  "instances": ${NUMBER_OF_INSTANCES},
+  "cpus": ${CPUS},
+  "mem": ${MEMORY},
+  "labels": ${LABELS},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "${DOCKER_IMAGE}:${deploy_release}",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "servicePort": ${HAPROXY_PORT},
+          "containerPort": 8000,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "parameters": [
+        {
+          "key": "env",
+          "value": "NODE_ENV=production"
+        },
+        {
+          "key": "env",
+          "value": "LOG_LEVEL=${LOG_LEVEL}"
+        },
+        {
+          "key": "env",
+          "value": "DB_PASSWORD=${DB_PASSWORD}"
+        },
+        {
+          "key": "env",
+          "value": "DB_HOST=${DB_HOST}"
+        },
+        {
+          "key": "env",
+          "value": "DATASTORE_API_URL=${DATASTORE_API_URL}"
+        },
+        {
+          "key": "env",
+          "value": "TIMEZONE_SERVICE_API_URL=${TIMEZONE_SERVICE_API_URL}"
+        }
+      ]
+    }
+  },
+  "args": [
+    "node",
+    "main.js",
+    "serve"
+  ],
+  "upgradeStrategy": {
+    "maximumOverCapacity": 1,
+    "minimumHealthCapacity": 0.75
+  },
+  "healthChecks": [
+    {
+      "path": "/health",
+      "protocol": "MESOS_HTTP",
+      "portIndex": 0,
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 10,
+      "maxConsecutiveFailures": 3,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "uris": [
+    "file:///opt/docker/docker.tar.gz"
+  ]
+}

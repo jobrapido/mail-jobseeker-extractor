@@ -1,0 +1,15 @@
+{
+  "list": [{
+    "datastoreKey": {
+      "region": "mail.jobseeker.extractor.queries",
+      "key": "q1"
+    },
+    "value": "SELECT * FROM table1"
+  }, {
+    "datastoreKey": {
+      "region": "mail.jobseeker.extractor.queries",
+      "key": "q2"
+    },
+    "value": "SELECT * FROM table2"
+  }]
+}

@@ -1,0 +1,14 @@
+dist
+build
+node_modules
+coverage
+yarn-error.log
+credentials.json
+jest.json
+npm-debug.log
+variables.env
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

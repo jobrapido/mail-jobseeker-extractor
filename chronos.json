@@ -1,0 +1,44 @@
+{
+  "schedule": "R/1970-01-01T00:00:00Z/PT15M",
+  "name": "${MARATHON_APP_ID}-${DEPLOY_APP_COUNTRY}",
+  "owner": "${OWNER}",
+  "container": {
+    "type": "DOCKER",
+    "image": "${DOCKER_IMAGE}:${deploy_release}",
+    "network": "BRIDGE"
+  },
+  "environmentVariables": [{
+      "name": "NODE_ENV",
+      "value": "production"
+    },
+    {
+      "name": "LOG_LEVEL",
+      "value": "${LOG_LEVEL}"
+    },
+    {
+      "name": "DB_PASSWORD",
+      "value": "${DB_PASSWORD}"
+    },
+    {
+      "name": "DB_HOST",
+      "value": "${DB_HOST}"
+    },
+    {
+      "name": "DATASTORE_API_URL",
+      "value": "${DATASTORE_API_URL}"
+    },
+    {
+      "name": "TIMEZONE_SERVICE_API_URL",
+      "value": "${TIMEZONE_SERVICE_API_URL}"
+    }
+  ],
+  "cpus": "${CPUS}",
+  "mem": "${MEMORY}",
+  "command": "node main.js run -c ${DEPLOY_APP_COUNTRY}",
+  "fetch": [{
+    "uri": "file:///opt/docker/docker.tar.gz",
+    "executable": false,
+    "cache": false,
+    "extract": true
+  }]
+}
